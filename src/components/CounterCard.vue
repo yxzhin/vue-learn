@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from "vue"
+import { Card, Button } from "primevue"
+
 const title = ref("vue learn")
 const count = ref(0)
 function increment() {
@@ -8,19 +10,26 @@ function increment() {
 </script>
 
 <template>
-  <div class="container-fluid">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">{{ title }}</h5>
-        <p class="card-text">count is: {{ count }}</p>
-        <a class="btn btn-primary" @click="increment">increment</a>
+  <Card style="width: 25rem; overflow: hidden">
+    <template #header>
+      <img alt="user header" src="https://primefaces.org/cdn/primevue/images/usercard.png" />
+    </template>
+    <template #title>Advanced Card</template>
+    <template #subtitle>Card subtitle</template>
+    <template #content>
+      <p class="m-0">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
+        repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa
+        ratione quam perferendis esse, cupiditate neque quas!
+      </p>
+    </template>
+    <template #footer>
+      <div class="flex gap-4 mt-1">
+        <Button label="Cancel" severity="secondary" variant="outlined" class="w-full" />
+        <Button label="Save" class="w-full" />
       </div>
-    </div>
-  </div>
+    </template>
+  </Card>
 </template>
 
-<style scoped>
-.card {
-  width: 18rem;
-}
-</style>
+<script setup></script>

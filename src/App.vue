@@ -8,8 +8,8 @@ function toggleDarkMode() {
 </script>
 
 <template>
-  <!-- <CounterCard />
-  <UserForm />-->
+  <CounterCard />
+  <!--<UserForm />-->
   <Button label="toggle theme" @click="toggleDarkMode()" />
 </template>
 
